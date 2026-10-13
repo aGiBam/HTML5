@@ -1,40 +1,41 @@
-/* #05Notes:
-1-background-color: red; color name 
-2-background-color: rgb 0 - 255  Red Green Blue => rgb(255, 0, 0) is red 
-3-background-color: rgb 0 - 255  Red Green Blue => rgb(255, 0, 0 / 50%) Red Green Blue Alpha channel
-4- background-image: url(""); 
-5- background-repeat: repeat/no-repeats;
-6- background-attachment: default = (scroll) - (fixed) - scroll with content 
-7- background-position: 
-8- background-size: 
+/*
+Block
+- takes full width if no width
+- add line break
+- Respect Padding Margin width and anything
+
+inline
+- don't add line break
+- don't respect width, height 
+- respect padding and margin (just left + right)
+
+inline-block
+- Allow Elements Before and After it
+- Respect Padding Margin width and anything
+- 
+
 */
-.assign-4-shape-1,
-.assign-4-shape-2,
-.assign-4-shape-3,
-.assign-4-shape-4 {
-  width: 400px;
-  height: 400px;
-  margin: auto;
-  padding: 20px;
-  background-image: url("../css-assignment-5-8.png");
-  border: 2px solid red;
+.assign-1-shape-1,
+.assign-1-shape-2,
+.assign-1-shape-3 {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 20px;
 }
-.assign-4-shape-1 {
-  background-repeat: no-repeat;
-  background-size: 80%;
+.assign-1-shape-1 {
+  border: 5px solid red;
+  outline: 5px solid black;
 }
-.assign-4-shape-2 {
-  background-repeat: repeat-y;
-  background-position: right;
-  background-size: 75%;
+.assign-1-shape-2 {
+  /* border: 5px solid green blue yellow red; */
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue green;
+  outline: 5px solid black;
 }
-.assign-4-shape-3 {
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-size: 75%;
-}
-.assign-4-shape-4 {
-  background-repeat: no-repeat;
-  background-size: 50% 50%;
-  background-position: bottom right;
+.assign-1-shape-3 {
+  border-width: 5px;
+  border-style: dashed;
+  border-color: red green blue yellow;
+  outline: 5px solid black;
 }
