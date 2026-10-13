@@ -1,12 +1,20 @@
-/* Any Element With Class Title */
-.title {}
-/* class */
-/* ? */
-#nav {}
-/* id */
-/* ? */
-div {}
-/* element */
-/* ? */
-h2 {}
-/* tag */   
+/* Valid */
+._user-name {}
+
+/* valid */
+.-user-name {}
+
+/* Invalid */
+.1user-name {}
+
+/* Invalid */
+.@user-name {}
+
+/* Invalid */
+.user@name {}
+
+/* Valid */
+._user10name {}
+
+/* Valid */
+.u {}
