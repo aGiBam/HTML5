@@ -15,27 +15,41 @@ inline-block
 - 
 
 */
-.assign-1-shape-1,
-.assign-1-shape-2,
-.assign-1-shape-3 {
-  display: inline-block;
+.element {
   padding: 15px 30px;
-  margin: 20px;
+  width: 400px;
+  background-color: #eeeeee;
 }
-.assign-1-shape-1 {
-  border: 5px solid red;
-  outline: 5px solid black;
+
+.element-1 {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    width: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    border-left: 5px solid;
+    border-color: #e91e63;
+  }
 }
-.assign-1-shape-2 {
-  /* border: 5px solid green blue yellow red; */
-  border-width: 5px;
-  border-style: solid;
-  border-color: blue green;
-  outline: 5px solid black;
+
+.element-2 {
+  visibility: hidden;
 }
-.assign-1-shape-3 {
-  border-width: 5px;
-  border-style: dashed;
-  border-color: red green blue yellow;
-  outline: 5px solid black;
+.element-3 {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    width: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    border-left: 5px solid;
+    border-color: #009688;
+  }
 }
