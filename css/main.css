@@ -8,10 +8,10 @@
 7- background-position: 
 8- background-size: 
 */
-.assign-3-shape-1,
-.assign-3-shape-2,
-.assign-3-shape-3,
-.assign-3-shape-4 {
+.assign-4-shape-1,
+.assign-4-shape-2,
+.assign-4-shape-3,
+.assign-4-shape-4 {
   width: 400px;
   height: 400px;
   margin: auto;
@@ -19,14 +19,22 @@
   background-image: url("../css-assignment-5-8.png");
   border: 2px solid red;
 }
-.assign-3-shape-1 {
+.assign-4-shape-1 {
   background-repeat: no-repeat;
+  background-size: 80%;
 }
-.assign-3-shape-2 {
+.assign-4-shape-2 {
   background-repeat: repeat-y;
   background-position: right;
+  background-size: 75%;
 }
-.assign-3-shape-3 {
+.assign-4-shape-3 {
   background-repeat: repeat-x;
   background-position: bottom;
+  background-size: 75%;
+}
+.assign-4-shape-4 {
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: bottom right;
 }
