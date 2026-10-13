@@ -1,20 +1,14 @@
-/* Valid */
-._user-name {}
+/* Bad */
+.USERNAME {}
 
-/* valid */
-.-user-name {}
+/* Bad */
+.UserName {}
 
-/* Invalid */
-.1user-name {}
+/* GOOD */
+.user-name {}
 
-/* Invalid */
-.@user-name {}
+/* Bad */
+.userName {}
 
-/* Invalid */
-.user@name {}
-
-/* Valid */
-._user10name {}
-
-/* Valid */
-.u {}
+/* Bad */
+.usernameprofile {}
