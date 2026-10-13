@@ -1,9 +1,11 @@
-div {
-  font-size: 10rem;
-  background-color: #fafafa62;
-  text-shadow:
-    5px 2px 0 rgb(255, 0, 191),
-    5px 2px 0 red,
-    8px 5px 0 blue;
-  white-space: nowrap;
+.one {
+  text-transform: uppercase;
+}
+
+.two {
+  text-transform: capitalize;
+}
+
+.three {
+  text-transform: lowercase;
 }
