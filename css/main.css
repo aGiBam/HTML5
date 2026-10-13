@@ -1,11 +1,19 @@
+div {
+  background-color: #f5f5f5;
+  width: 400px;
+  padding: 15px;
+}
 .one {
-  text-transform: uppercase;
+  white-space: normal;
 }
 
 .two {
-  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .three {
-  text-transform: lowercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
