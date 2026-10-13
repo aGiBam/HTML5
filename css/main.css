@@ -1,14 +1,17 @@
-/* Bad */
-.USERNAME {}
-
-/* Bad */
-.UserName {}
-
-/* GOOD */
-.user-name {}
-
-/* Bad */
-.userName {}
-
-/* Bad */
-.usernameprofile {}
+.assign-1-shape-1,
+.assign-1-shape-2,
+.assign-1-shape-3 {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+.assign-1-shape-1 {
+  background-color: blueviolet;
+  /* background-color: #8a2be2; */
+}
+.assign-1-shape-2 {
+  background-color: #892be241;
+}
+.assign-1-shape-3 {
+  background-color: rgba(138, 43, 226, 0.1);
+}
