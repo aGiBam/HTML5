@@ -1,58 +1,93 @@
-/* By defaukt user agent adds margin: 8px */
+/* * {
+  box-sizing: border-box;
+} */
+body {
+  background-color: #eee;
+}
+
 .parent {
-  background-color: red;
-  opacity: 0.5;
-  overflow: hidden;
-  padding: 10px;
+  width: 800px;
+  margin: 20px auto;
 }
 
 .parent div {
-  padding: 10px 0;
-  /* margin-left: 1%; */
-  /* margin-left: 2%; */
-  /* margin-left: 15px; */
-  margin-left: 10px;
   text-align: center;
-  background-color: #ccc;
-  /* width: 23.75%; */
-  /* width: 17.6%; */
-  float: left; /*خاصيه بتخلي العناصر تعووم فالصفحه*/
-  /* width: calc(88% / 5); */
-  width: calc((100% - 60px) / 5);
+  margin-top: 15px;
+  margin-left: 15px;
+  float: left;
+  padding: 15px 0;
+  background-color: #ddd;
 }
 
-.clear {
-  clear: left;
+.full {
+  width: calc(100% - 30px);
+}
+/* 100% - 4spaces * 15px = 60px / 4 elements */
+.w-3 {
+  width: calc((100% - 60px) / 3);
 }
 
-p {
-  text-transform: capitalize;
-  background-color: blue;
-  opacity: 0.7;
+.w-2 {
+  width: calc((100% - 45px) / 2);
 }
+
+.w-4 {
+  width: calc((100% - 75px) / 4);
+}
+
+.w-5 {
+  width: calc((100% - 90px) / 5);
+}
+
 /* 
-Content Width is: 100%
-for my example haaving 4 elements = elements + 1 (لان الهوامش بعد وقبل) = 5 margins/spaces
-1 space = 1% => 5% from content width
-95% remaining space for elements
-95% / 4 elements = 23.75% for each element
+content-width = 100&
+margin-left = 15px
+padding = 15px => 2 *15 = 30
 
-Self Try 
-1- 5 elements => 6 margins/spaces
-6 * 1% = 6%
-6 * 2% = 12%
-100% - 12% = 88% remaining space
-88% / 5 elements = 17.6% for each element
+3 elements + 1 عشان قبلهم وبعدهم - 4 spaces 
+15 * 4 = 60
+calc((100% - 60px) / 4)
 
-2- content width is 100 
-6 spaces and each space = 15px
-6 * 15px = 90px
-100% - 90px = 99% remaining space
-99% / 5 elements = 19.8% for each element
+4 elements => 4 * 15 = 60 => calc((100% - 60px) / 4)
 
-3- content width is 100 
-6 spaces and each space = 10px
-6 * 10px = 60px
-100% - 60px = 99% remaining space
-99% / 5 elements = 19.8% for each element
+
+دي ملاحظاتي للدرس يا شباب بكتبها لنفسي عشان افهم نفسي بصوت عالي عندكم اهي لو حد ممكن يستفيد منها ونسقتها بالAi عشان تبقي واضحه ليكم بالتوفيق واسف لو طويلة شوية 
+
+تخيل إن عندنا 4 عناصر وعايزين نحطهم جنب بعض، فهنستخدم الـ float والـ clear زي ما اخدنا قبل كده. طيب دلوقتي العناصر لازقين في بعض، وعايزين نسيب مسافة بينهم. هنا بنستخدم الـ margin، ودي حاجة عادية جدًا.
+بس الموضوع فيه حسبه بسيطة مش بنحفظها، لأ، لازم نفهمها.
+إنت عارف إن العنصر الأب (اللي هو الـ container) دايمًا عرضه بيكون 100%.
+احنا عايزين نسيب مثلًا 1% margin لكل فراغ بين العناصر. تمام؟
+ طيب عندنا 4 عناصر. لو عايزين نسيب مسافة قبل أول عنصر وبعد آخر عنصر، يبقى عدد المسافات = 5، لأننا بنزود 1 على عدد العناصر.
+ولو مش عايزين نسيب مسافة قبل أول عنصر ولا بعد آخر عنصر، يبقى عدد المسافات = 3 (يعني نطرح 1 بدل ما نزود).
+
+فلو قولنا إننا عايزين 1% لكل مسافة، وعدد المسافات 5، يبقى 5 × 1% = 5% من إجمالي عرض الاب رايحة للمسافات.
+يبقى متبقي كام للعرض الحقيقي بتاع العناصر؟
+ 100% - 5% = 95%
+نقسم الـ 95% على عدد العناصر (اللي هو 4)، يبقى كل عنصر ياخد 23.75%، وندي لكل عنصر margin 1% (يمين أو شمال).
+وكده التنسيق يضبط تمام.
+
+طيب لو حد قالك: لا أنا عايز المسافات تبقى بالبيكسل مش بالنسبة المئوية؟
+فترض إننا عايزين نخلي كل مسافة = 15px، وعدد المسافات 5:
+ 15px × 5 = 75px
+يعني المساحات اللي بين العناصر كلها = 75px.
+لو كنا نعرف إن عرض العنصر الأب = 1000px، يبقى:
+ 1000 - 75 = 925px
+نقسم الـ 925px دي على عدد العناصر (4)، يبقى كل عنصر ياخد:
+ 231.25px
+والمسافات نديها 15px.
+
+طب في حالتنا هنا هنفترض اننا منعرفش غير ان الاب 100% فقط منعرفش هو كام بيكسل 
+هنا بقى نستخدم calc()، ونكتب الصيغة كده:
+
+width: calc;((100% - 75px) / 4)
+
+بنقوله ببساطة: "اطرحلي الـ 75 بيكسل بتوع المسافات من إجمالي عرضك (100%)، وقسّمه على 4 عناصر."
+نفس الفكرة تنفع لو المسافات كانت بالنسبة المئوية، ساعتها نكتب:
+
+width: calc;(95% / 4 ) 
+
+يعني بنقول للمتصفح: "اقسملي النسبة المتبقية من الأب (بعد طرح المسافات) على عدد العناصر."
+
+
+
 */
