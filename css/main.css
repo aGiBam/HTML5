@@ -1,21 +1,20 @@
-div {
-  font-size: 4rem;
+html {
+  font-size: 20px;
+}
+.one,
+.two,
+.three {
+  padding: 10px;
+  text-align: center;
+}
+.one {
+  font-size: 2.5rem;
 }
 
-.open-sans {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: italic;
+.two {
+  font-size: 2rem;
 }
-.cairo {
-  font-family: "Cairo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-.jomhuria-regular {
-  font-family: "Jomhuria", serif;
-  font-weight: 400;
-  font-style: normal;
+
+.three {
+  font-size: 1.5rem;
 }
