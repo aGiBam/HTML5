@@ -1,20 +1,58 @@
-html {
-  font-size: 20px;
-}
-.one,
-.two,
-.three {
+/* By defaukt user agent adds margin: 8px */
+.parent {
+  background-color: red;
+  opacity: 0.5;
+  overflow: hidden;
   padding: 10px;
+}
+
+.parent div {
+  padding: 10px 0;
+  /* margin-left: 1%; */
+  /* margin-left: 2%; */
+  /* margin-left: 15px; */
+  margin-left: 10px;
   text-align: center;
-}
-.one {
-  font-size: 2.5rem;
+  background-color: #ccc;
+  /* width: 23.75%; */
+  /* width: 17.6%; */
+  float: left; /*خاصيه بتخلي العناصر تعووم فالصفحه*/
+  /* width: calc(88% / 5); */
+  width: calc((100% - 60px) / 5);
 }
 
-.two {
-  font-size: 2rem;
+.clear {
+  clear: left;
 }
 
-.three {
-  font-size: 1.5rem;
+p {
+  text-transform: capitalize;
+  background-color: blue;
+  opacity: 0.7;
 }
+/* 
+Content Width is: 100%
+for my example haaving 4 elements = elements + 1 (لان الهوامش بعد وقبل) = 5 margins/spaces
+1 space = 1% => 5% from content width
+95% remaining space for elements
+95% / 4 elements = 23.75% for each element
+
+Self Try 
+1- 5 elements => 6 margins/spaces
+6 * 1% = 6%
+6 * 2% = 12%
+100% - 12% = 88% remaining space
+88% / 5 elements = 17.6% for each element
+
+2- content width is 100 
+6 spaces and each space = 15px
+6 * 15px = 90px
+100% - 90px = 99% remaining space
+99% / 5 elements = 19.8% for each element
+
+3- content width is 100 
+6 spaces and each space = 10px
+6 * 10px = 60px
+100% - 60px = 99% remaining space
+99% / 5 elements = 19.8% for each element
+*/
