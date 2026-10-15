@@ -1,35 +1,41 @@
-ul li {
-  background-color: #ddd;
-  margin: 10px;
-  padding: 5px;
+body {
+  font-family: sans-serif;
+}
+h1 {
+  text-align: center;
+}
+table {
+  width: 700px;
+  margin: auto;
+  text-align: center;
 }
 
-.none {
-  list-style: none;
+th {
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.671);
 }
-
-ol {
-  list-style-position: outside;
+td {
+  background-color: #eee;
 }
-
-ul li.speciaL {
-  list-style-type: circle;
+th,
+td {
+  text-transform: capitalize;
+  padding: 15px;
 }
-.roman {
-  list-style-type: upper-roman;
+.delete {
+  background-color: red;
 }
-
-ul.inside {
-  list-style-position: inside;
-  padding: 0;
+.view {
+  background-color: #09c;
 }
-
-ol,
-ul:not(.inside) {
-  padding: 0 24px;
+.delete,
+.view {
+  padding: 5px 10px;
+  margin-left: 5px;
+  color: white;
+  cursor: pointer;
+  border: none;
 }
-
-ol li,
-li.inside {
-  background-color: white;
+img {
+  width: 100px;
 }
