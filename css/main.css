@@ -1,37 +1,37 @@
+body {
+  counter-reset: item;
+}
+
 p {
+  counter-increment: item;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   width: fit-content;
   height: 60px;
   margin: 20px auto;
-  padding: 5px 12px;
+  padding: 5px 100px;
   background-color: #eee;
   line-height: 60px;
   white-space: nowrap;
-  border-left: 10px solid #e91e63;
-}
-
-p::before {
-  content: attr(data-person);
-  background-color: #eee;
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  padding: 0px 11px;
-  top: 0px;
-  width: 60px;
-  left: -113px;
-  text-align: center;
 }
 
 p::after {
   content: "";
-  /* width: 20px; */
-  /* height: 20px; */
+  background-color: red;
   position: absolute;
-  left: -29px;
+  padding: 35px 4px;
+  top: 0px;
+  right: 0;
+  text-align: center;
+}
+
+p::before {
+  content: counter(item);
+  padding: 4px 25px;
+  color: white;
+  position: absolute;
+  background-color: red;
+  left: 0;
   top: 50%;
-  margin-top: -11px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent #e91e63 transparent transparent;
+  margin-top: -34px;
 }
