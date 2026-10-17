@@ -15,17 +15,9 @@ p {
   white-space: nowrap;
 }
 
-p::after {
-  content: "";
-  background-color: red;
-  position: absolute;
-  padding: 35px 4px;
-  top: 0px;
-  right: 0;
-  text-align: center;
-}
-
 p::before {
+  /* content: attr(data-text); */
+  /* content: url(./image.png); */
   content: counter(item);
   padding: 4px 25px;
   color: white;
@@ -34,4 +26,14 @@ p::before {
   left: 0;
   top: 50%;
   margin-top: -34px;
+}
+
+p::after {
+  content: "";
+  background-color: red;
+  position: absolute;
+  padding: 35px 4px;
+  top: 0px;
+  right: 0;
+  text-align: center;
 }
