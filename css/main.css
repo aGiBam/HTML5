@@ -1,37 +1,19 @@
-/*
-  CSS Variables
-  Global Scope Vars / Local Scope Vars
-  root هو عنصر HTML -> و يعتبر root  بتاع الويب
-  لازم اسم المتغير يبدأ ب 2 دش -- Case Sensitive ( حساسة لحالة الأحرف )
-  var (Variable Name, Fallback Value)
-*/
-
-:root {
-  /* --main-color: blue; */
-  --secondary-color: red;
-  --main-padding: 20px;
+.parent {
+  padding: 40px;
+  background: #eeee;
+  margin: 10px auto;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
 }
-.main {
-  background-color: var(--main-color, black);
-  color: white;
-  padding: calc(var((--main-padding) + 20px));
+.parent:hover {
+  padding: 1px;
 }
-h2 {
-  color: white;
-  background-color: var(--main-color);
-  padding: var(--main-padding);
+.child {
+  margin-top: 20px;
+  background: #ddd;
+  padding: 15px;
+  transition: all 0.5s 0.5s ease-in-out;
 }
-p {
-  color: var(--main-color);
-  border: 2px solid var(--main-color);
-  padding: var(--main-padding);
+.parent:hover .child {
+  padding: 30px;
 }
-a:hover {
-  color: var(--main-color);
-}
-.local {
-  --main-color: black;
-  background-color: var(--main-color);
-  color: white;
-}
-/* var ممكن يكون موجود على مستوى السيستم او الكومبوننت بس  */
