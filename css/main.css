@@ -1,22 +1,37 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
-.one {
+.parent {
+  overflow: hidden;
+  margin: auto;
+  padding: 10px;
+  width: 400px;
+  height: 200px;
   background-color: #eee;
-  width: 200px;
-  height: 100px;
-  transition-duration: 3s;
-  transition-delay: 0.2s;
-  transition-property: width;
-  /* default: ease يبدأ بطيء بعدين يسرع وينتهي بطيء */
-  /* ease-in بدايه بطيئه ease-out نهايه بطيئه */
-  /* ease-in-out */
-  /* linear يعني خطّي يعني نفس السرعه لكل الحالات */
-  /* transition: all 0.5s 2s linear ; */
-  transition-timing-function: ease;
 }
 
-.one:hover {
-  width: 220px;
+.parent .one {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #aaa;
+}
+
+.parent .two {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.parent .up {
+  color: white;
+  height: 80px;
+  background-color: green;
+  margin-bottom: 40px;
+}
+.parent .down {
+  color: white;
+  height: 80px;
+  background-color: red;
+  margin-top: 20px;
 }
