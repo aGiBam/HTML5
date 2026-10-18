@@ -1,39 +1,14 @@
-* {
-  box-sizing: border-box;
-}
-
 div {
-  counter-increment: div;
   position: relative;
-  display: inline-block;
   margin: 20px auto;
   width: 100px;
   height: 100px;
-  outline: 2px solid black;
-  border-radius: 50px;
+  background-color: #efefef;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 15px;
   box-shadow:
-    -10px -11px 0 #e91e63,
-    10px 11px 0 #2196f3;
-}
-
-div::before {
-  content: counter(div);
-  color: white;
-  position: absolute;
-  left: 40px;
-  width: 20px;
-  text-align: center;
-  height: 20px;
-  margin: -10px auto;
-  border-radius: 10px;
-  background: #000;
-  z-index: 1;
-}
-div::after {
-  content: "Element";
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: 22px;
-  top: 42px;
+    0 0 10px 0 #ddd inset,
+    0 0 10px 0 #000 inset;
 }
