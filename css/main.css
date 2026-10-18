@@ -1,14 +1,105 @@
-div {
+* {
+  box-sizing: border-box;
+}
+.parent {
+  width: 550px;
+}
+
+.basic,
+.pro {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #eee;
+}
+
+.basic {
+  margin: 10px auto;
   position: relative;
-  margin: 20px auto;
+}
+
+.basic::before {
+  content: "Basic";
+  line-height: 30px;
+  position: absolute;
+  color: white;
+  background-color: #03a9f4;
+  margin: 10px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 108px;
+  height: 30px;
+  text-align: center;
+}
+.basic::after {
+  content: "Free";
+  position: absolute;
   width: 100px;
   height: 100px;
-  background-color: #efefef;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 15px;
-  box-shadow:
-    0 0 10px 0 #ddd inset,
-    0 0 10px 0 #000 inset;
+  border-radius: 50px;
+  top: 30%;
+  left: 25px;
+  background: #dddddd;
+  text-align: center;
+  line-height: 6;
+}
+hr {
+  position: relative;
+  display: inline-block;
+  height: 150px;
+  width: 3px;
+  background-color: #03a9f4;
+  margin: 9px 15px;
+  border: none;
+}
+
+hr::after {
+  content: "Or";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #03a9f4;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  margin-left: 15px;
+}
+
+.pro {
+  margin: 10px auto;
+  width: 150px;
+  height: 150px;
+  background-color:;
+}
+
+.pro::before {
+  content: "Pro";
+  line-height: 30px;
+  position: absolute;
+  color: white;
+  background-color: #03a9f4;
+  margin: 10px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 108px;
+  height: 30px;
+  text-align: center;
+}
+
+.pro::after {
+  content: "$30";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  top: 10%;
+  right: 51%;
+  background: #dddddd;
+  text-align: center;
+  line-height: 6;
 }
