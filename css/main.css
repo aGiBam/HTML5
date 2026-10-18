@@ -1,19 +1,17 @@
-.parent {
-  padding: 40px;
-  background: #eeee;
-  margin: 10px auto;
-  text-align: center;
-  transition: all 0.5s ease-in-out;
+div {
+  color: transparent !important;
+  width: 400px !important;
+  font-size: 20px !important;
+  background-color: #eee !important;
+  margin: auto !important;
+  border: none !important;
+  text-align: start !important;
+  position: relative;
 }
-.parent:hover {
-  padding: 1px;
-}
-.child {
-  margin-top: 20px;
-  background: #ddd;
-  padding: 15px;
-  transition: all 0.5s 0.5s ease-in-out;
-}
-.parent:hover .child {
-  padding: 30px;
+
+div::before {
+  content: "Elzero";
+  color: black !important;
+  position: absolute;
+  right: 200px;
 }
