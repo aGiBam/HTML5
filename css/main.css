@@ -1,39 +1,39 @@
-body {
-  counter-reset: item;
+* {
+  box-sizing: border-box;
 }
 
-p {
-  counter-increment: item;
+div {
+  counter-increment: div;
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  width: fit-content;
-  height: 60px;
+  display: inline-block;
   margin: 20px auto;
-  padding: 5px 100px;
-  background-color: #eee;
-  line-height: 60px;
-  white-space: nowrap;
+  width: 100px;
+  height: 100px;
+  outline: 2px solid black;
+  border-radius: 50px;
+  box-shadow:
+    -10px -11px 0 #e91e63,
+    10px 11px 0 #2196f3;
 }
 
-p::before {
-  /* content: attr(data-text); */
-  /* content: url(./image.png); */
-  content: counter(item);
-  padding: 4px 25px;
+div::before {
+  content: counter(div);
   color: white;
   position: absolute;
-  background-color: red;
-  left: 0;
-  top: 50%;
-  margin-top: -34px;
-}
-
-p::after {
-  content: "";
-  background-color: red;
-  position: absolute;
-  padding: 35px 4px;
-  top: 0px;
-  right: 0;
+  left: 40px;
+  width: 20px;
   text-align: center;
+  height: 20px;
+  margin: -10px auto;
+  border-radius: 10px;
+  background: #000;
+  z-index: 1;
+}
+div::after {
+  content: "Element";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 22px;
+  top: 42px;
 }
