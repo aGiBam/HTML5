@@ -1,17 +1,11 @@
-div {
-  color: transparent !important;
-  width: 400px !important;
-  font-size: 20px !important;
-  background-color: #eee !important;
-  margin: auto !important;
-  border: none !important;
-  text-align: start !important;
-  position: relative;
-}
+/* :root {
+  --mainColor: #009688;
+  --mainPadding: 10px;
+} */
 
-div::before {
-  content: "Elzero";
-  color: black !important;
-  position: absolute;
-  right: 200px;
+div {
+  color: var(--mainColor, red);
+  border: 2px solid var(--mainColor, black);
+  padding: var(--mainPadding, 10px);
+  margin: var(--mainPadding, 10px);
 }
