@@ -1,11 +1,43 @@
-/* :root {
-  --mainColor: #009688;
-  --mainPadding: 10px;
-} */
-
-div {
-  color: var(--mainColor, red);
-  border: 2px solid var(--mainColor, black);
-  padding: var(--mainPadding, 10px);
-  margin: var(--mainPadding, 10px);
+/* 
+FlexBox 
+display: flex //start flexiable box
+- flex-direction: row <- default || column || row-reverse || column-reverse
+بناءا على ال dir. LTR / RTL بيبدأ بناءا عليه
+على عكس ال FLOAT اللي لازم اديها Float: right/left
+- flex-wrap: nowrap <- default || wrap || wrap-reverse
+للعنصر الزيادة لو اكبر من مساحة الكونتينر wrap ينزل تحت 
+- flex-flow: [flex-direction] + [flex-wrap]
+*/
+* {
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+.flex div {
+  background-color: red;
+  color: white;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+.float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float div {
+  background-color: red;
+  color: white;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+  float: left;
 }
