@@ -22,9 +22,14 @@ display: flex //start flexiable box
   display: flex;
   /* justify-content: space-around; بين العناصر وحواليها */
 /* justify-content: space-evenly; بيخلى المسافة بين العناصر متساوية وبيجمع around + between */
-
+/* -align-content: stretch -> Default */
+/*
+  الفرق بين align-items, align-content ? 
+  align-items: بتتحكم فى كل عنصر بشكل فردى
+  align-content: بتتحكم فى كل العناصر مع بعض
+  */
 .flex div {
-  align-itms: stretch; /* needs height to work; */
+  align-items: stretch; /* needs height to work; */
   background-color: red;
   color: white;
   width: calc(94% / 3);
