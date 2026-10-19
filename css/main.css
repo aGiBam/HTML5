@@ -32,6 +32,8 @@ display: flex //start flexiable box
 بيتأثر بـ max-width بحيث انه بيحترمه فمش بيعيديه
 flex: [flex-grow] - [flex-shrink] - [flex-basis] 0 1 auto -> default 
 display: inline-flex هيعمل الفليكس بوكس بالمسطرة على عكس display:flex هيعمل الفليكس بوكس كانه بلوك  فمفيش عناصر بتيجي جنبه
+align-self: auto -> Default || stretch || flex-start || flex-end || center || baseline بيتحرك في اي مكان في الفليكس بوكس
+
 */
 .flex {
   background-color: #eee;
