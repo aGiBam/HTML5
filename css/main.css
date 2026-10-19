@@ -1,5 +1,6 @@
 /* 
 FlexBox 
+For Parent
 display: flex //start flexiable box
 - flex-direction: row <- default || column || row-reverse || column-reverse
 بناءا على ال dir. LTR / RTL بيبدأ بناءا عليه
@@ -10,16 +11,7 @@ display: flex //start flexiable box
 - justify-content: [flex-start -> Defaublt | flex-end | center | space-between بيوزّع ال space dynamic | space-around]
 - align-items: [stretch -> Default to fit-content || flex-start || flex-end || center || baseline]
 بتخلي المحتوى في بداية الفليكس لكن طولياّ غير ال justify-content اللي بتعمل دا بشكل عرضي
-
-* {
-  box-sizing: border-box;
-}
-.flex {
-  background-color: #eee;
-  width: 600px;
-  padding: 20px;
-  margin: 20px auto;
-  display: flex;
+---
   /* justify-content: space-around; بين العناصر وحواليها */
 /* justify-content: space-evenly; بيخلى المسافة بين العناصر متساوية وبيجمع around + between */
 /* -align-content: stretch -> Default */
@@ -28,40 +20,25 @@ display: flex //start flexiable box
   align-items: بتتحكم فى كل عنصر بشكل فردى
   align-content: بتتحكم فى كل العناصر مع بعض
   */
-.flex div {
-  align-items: stretch; /* needs height to work; */
-  background-color: red;
-  color: white;
-  width: calc(94% / 3);
-  text-align: center;
-  padding: 20px;
-}
-.float {
-  overflow: hidden;
+/*
+ For Child 
+-- flex-grow: 0 -> Default -> بيخليه ياخد مكانه بس  (ينمو في المساحة المتاحة )
+-- flex-shrink: 1 -> Default -> بيخليه ينكمش اذا لزم الامر (ينكمش من حجمه ) - بيقف لما كل العناصر تبقى قد بعض 
+-- order: 0 -> Default -> بيتحكم في ترتيب العناصر 
+مثال عليها عملي  memory game cards 
+*/
+.flex {
   background-color: #eee;
-  width: 600px;
+  width: 800px;
   padding: 20px;
   margin: 20px auto;
+  display: flex;
 }
-.float div {
+.flex div {
   background-color: red;
   color: white;
-  width: calc(94% / 3);
+  width: 100px;
   text-align: center;
   padding: 20px;
-  float: left;
-  margin-left: 1%;
-  margin-right: 1%;
-}
-.center {
-  background-color: blue;
-  color: white;
-  height: 200px;
-  width: 300px;
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  /* text-align: center; */
-  /* margin: 20px auto; */
-  /* flex-direction: column; */
+  margin-right: 5px;
 }
