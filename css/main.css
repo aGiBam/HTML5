@@ -26,6 +26,12 @@ display: flex //start flexiable box
 -- flex-shrink: 1 -> Default -> بيخليه ينكمش اذا لزم الامر (ينكمش من حجمه ) - بيقف لما كل العناصر تبقى قد بعض 
 -- order: 0 -> Default -> بيتحكم في ترتيب العناصر 
 مثال عليها عملي  memory game cards 
+---
+-- flex-basis: auto -> Default 
+الفرق بين وبين width: -> في row بيتعامل مع width في col بيتعامل مع height so -> على جسب ال direction والـ flex-direction الـ basis بيتعامل مع العرض أو الارتفاع
+بيتأثر بـ max-width بحيث انه بيحترمه فمش بيعيديه
+flex: [flex-grow] - [flex-shrink] - [flex-basis] 0 1 auto -> default 
+display: inline-flex هيعمل الفليكس بوكس بالمسطرة على عكس display:flex هيعمل الفليكس بوكس كانه بلوك  فمفيش عناصر بتيجي جنبه
 */
 .flex {
   background-color: #eee;
