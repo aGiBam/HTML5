@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   display: flex;
   align-items: center;
@@ -5,21 +8,20 @@ body {
 }
 .parent {
   display: flex;
-  position: relative;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
   height: 300px;
   width: 600px;
-  padding: 20px;
-  flex-wrap: wrap;
+  padding: 10px 3px;
   background: #eee;
-  color: #ff5722;
-  align-content: space-between;
-  gap: 15px;
+  gap: 5px;
 }
 
 .parent div {
-  width: calc(100% / 3 - 30px);
+  width: calc(100% / 3 - 15px);
   padding: 10px;
-  background-color: rgb(214, 64, 64);
+  background-color: #607d8b;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -27,4 +29,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.one {
+  height: 50px;
+}
+.three {
+  order: 4;
+  height: 50px;
+  align-self: start;
+}
+.four {
+  order: 1;
+}
+.six {
+  order: 5;
 }
