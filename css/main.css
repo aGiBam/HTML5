@@ -8,18 +8,19 @@ body {
 }
 .parent {
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
   height: 300px;
   width: 600px;
-  padding: 10px 3px;
   background: #eee;
-  gap: 5px;
+  padding: 10px;
 }
 
 .parent div {
-  width: calc(100% / 3 - 15px);
+  width: calc((100% - 20px) / 3);
+  height: 50%;
   padding: 10px;
   background-color: #607d8b;
   color: white;
@@ -31,17 +32,36 @@ body {
   align-items: center;
 }
 
-.one {
-  height: 50px;
+.parent .one,
+.parent .three {
+  height: 40px;
 }
-.three {
-  order: 4;
-  height: 50px;
-  align-self: start;
+
+.parent .two,
+.parent .four {
+  height: 50%;
 }
-.four {
+
+.six {
   order: 1;
 }
-.six {
+
+.five {
+  order: 2;
+}
+
+.three {
+  order: 3;
+}
+
+.two {
+  order: 4;
+}
+
+.four {
   order: 5;
+}
+
+.one {
+  order: 6;
 }
