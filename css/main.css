@@ -1,17 +1,11 @@
 * {
   box-sizing: border-box;
 }
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .parent {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: space-around;
   height: 300px;
   width: 600px;
   background: #eee;
@@ -33,35 +27,20 @@ body {
 }
 
 .parent .one,
+.parent .two,
 .parent .three {
   height: 40px;
+  width: 30px;
+  flex: 1;
+  margin-bottom: 20px;
 }
 
-.parent .two,
-.parent .four {
-  height: 50%;
+.parent .one,
+.parent .three {
+  flex-basis: 10px;
+  align-self: flex-end;
 }
 
-.six {
-  order: 1;
-}
-
-.five {
-  order: 2;
-}
-
-.three {
-  order: 3;
-}
-
-.two {
-  order: 4;
-}
-
-.four {
-  order: 5;
-}
-
-.one {
-  order: 6;
+.parent .two {
+  width: 50%;
 }
