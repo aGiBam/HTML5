@@ -1,68 +1,30 @@
-/*
-Gradients 
-linear-gradient(Direction || Angle, Color Stop 1 , ...2, etc..)
+/* 
+Caret Color 
+Pointer Events
+caret-color: red
+pointer-events: none
 */
-
-div {
+.flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 600px;
-  height: 200px;
-  background-color: #eee;
-  margin: 20px auto;
   position: relative;
-  border-left: 10px solid red;
-  border-right: 10px solid purple;
-  padding: 10px;
-  letter-spacing: 5px;
-  font-weight: 800;
-  font-size: 1.6rem;
-  font-family: serif;
-  transform: translateY(50%);
-  /* background-image: linear-gradient(to right, blue 20%, red 50%, green 10%, yellow); */
-
-transform: translateY(50%, -50%)
+  flex-direction: column;
+  gap: 20px;
 }
-div::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background-image: linear-gradient(
-    to right,
-    red 20%,
-    #09c 20%,
-    #09c 40%,
-    green 40%,
-     green 60%,
-    pink 60%,
-    pink 80%,
-    purple 80%
-  );
+.flex input {
+  caret-color: red;
+  width: 600px;
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+  border: none;
+  background-color: #eee;
 }
-div::first-letter {
-  background-color: red;
-}
-
-div::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background-image: linear-gradient(
-    to right,
-    red 20%,
-    #09c 20%,
-    #09c 40%,
-    green 40%,
-     green 60%,
-    pink 60%,
-    pink 80%,
-    purple 80%
-  );
+.flex::after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, red 50%, #09c 50%, #09c 100%);
+    width: 600px;
+    height: 5px;
+    bottom: 21px;
+    left: 109px;
 }
