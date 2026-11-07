@@ -2,63 +2,63 @@
   box-sizing: border-box;
 }
 
-.parent {
+.page {
   display: flex;
-  justify-content: space-between;
-  height: 300px;
-  width: 600px;
-  background: #eee;
+  flex-direction: column;
   padding: 10px;
+  gap: 20px;
+  background: black;
 }
 
-.parent div {
-  height: 50%;
-  padding: 10px;
-  background-color: #607d8b;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
+.header {
   display: flex;
-  justify-content: space-around ;
+  justify-content: space-between;
+  align-items:center;
+  gap: 20px;
+  /* background: teal; */
+  /* padding: 20px; */
+}
+
+.logo {
+  display: flex;
+  background: green;
+  height: 58px;
+  padding: 5px 30px;
   align-items: center;
 }
 
-.parent .one{
-    background-color: #ff9800;
-}
-.parent .two {
-  background-color: #8bc34a;
-}
-
-.parent .three {
-  background-color: #795548;
-}
-
-.parent .four {
-  background-color: #673ab7;
+ul.links {
+  display: flex;
+  justify-content: flex-end;
+  background-color: orange;
+  width: 100%;
+  gap: 5px;
+  padding: 20px;
+  list-style: none;
 }
 
-.parent .one,
-.parent .two,
-.parent .three,
-.parent .four  {
-width: 12.5%;
+.main-area {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  height: 150px;
 }
-.parent .four,
-.parent .two {
-  align-self: flex-end;
+.content {
+  display: flex;
+  padding: 10px;
+  flex: 1;
+  background: red;
 }
-
-.parent .four {
-  order: 1;
+.sidebar {
+  display: flex;
+  justify-content: start;
+  background: blue;
+  width: 260px;
+  padding: 10px;
 }
-.parent .one {
-  order: 2;
-}
-.parent .two {
-  order: 3;
-}
-.parent .three {
-  order: 4;
+.footer {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
