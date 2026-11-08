@@ -3,6 +3,7 @@
   Parent
   display: grid | inline-grid
   grid-template-columns => [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat(), Mix]
+  grid-template-rows => [Number Of Rows Height In] => [Px, %, Auto, Fraction, Repeat(), Mix]
 */
 /* fraction is greedy, auto is shy */
 * {
@@ -15,13 +16,17 @@
   height: 500px;
   background-color: #eee;
   display: grid;
-  grid-template-columns: repeat(2, auto) repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* row-gap: 10px;
+  column-gap: 10px; */
+  gap: 10px 10px;
 }
-
 .parent div {
   background-color: red;
   color: white;
   padding: 20px;
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
 }
