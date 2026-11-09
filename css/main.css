@@ -6,59 +6,32 @@
   grid-template-rows => [Number Of Rows Height In] => [Px, %, Auto, Fraction, Repeat(), Mix]
 */
 /* fraction is greedy, auto is shy */
+
+/* 
+- grid-column: short hand for grid-column-start , grid-column-end
+grid-column: start / end , eg: 1-4 columns = 1/5 */
+/* grid-column: span 4 , like colspan 4 in table  */
+/* grid-column: 2 / span 3 , start from column 2 and span 3 columns 
+- grid-column: span 4 لو أكبر من الأعمده هينزل تحت مش هيبوظ الجريد زي 1/ رقم اكبر 
+*/
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
-ul {
-  list-style: none;
+.parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px 10px;
 }
-
-ul li {
-  display: inline-block;
-}
-
-.page {
-  display: grid;
-  background-color: #eee;
-  height: 100dvh;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 50px auto 50px;
-  grid-template-areas:
-    "logo logo nav nav nav nav nav nav nav nav"
-    "sidebar sidebar sidebar . cont cont cont cont cont cont"
-    "foot foot foot foot foot foot foot foot foot foot"
-    ;
-}
-
-h2 {
-  grid-area: logo;
+.parent div {
   background-color: red;
   color: white;
-}
-
-nav {
-  grid-area: nav;
-  background-color: blue;
-  color: white;
-}
-
-section {
-  grid-area: cont;
-  background-color: yellow;
-  color: white;
-}
-
-aside {
-  grid-area: sidebar;
-  background-color: green;
-  color: white;
-}
-
-footer {
-  grid-area: foot;
-  background-color: black;
-  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
