@@ -1,19 +1,30 @@
 /*
-  Grid
-  Parent
-  display: grid | inline-grid
-  grid-template-columns => [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat(), Mix]
-  grid-template-rows => [Number Of Rows Height In] => [Px, %, Auto, Fraction, Repeat(), Mix]
+Grid
+Parent
+  -- display: grid | inline-grid
+  -- grid-template-columns => [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat(), Mix]
+  -- grid-template-rows => [Number Of Rows Height In] => [Px, %, Auto, Fraction, Repeat(), Mix]
+  -- gap: [Row Gap] [Column Gap]
+  -- justify-content
+  -- align-content
+  -- grid-template-areas
+Child
+  -- grid-column: [Grid Column Start] [Grid Column End]
+  -- grid-row: [Grid Row Start] [Grid Row End]
+  -- grid-area: [Grid Row Start] [Grid Column Start] [Grid Row End] [Grid Column End]
+      background: green;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 5;
+    grid-column-end: 6;
+    grid-area: 2 / 2 / 5 / 6;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 5;
+    grid-column-end: 6;
+}
 */
-/* fraction is greedy, auto is shy */
 
-/* 
-- grid-column: short hand for grid-column-start , grid-column-end
-grid-column: start / end , eg: 1-4 columns = 1/5 */
-/* grid-column: span 4 , like colspan 4 in table  */
-/* grid-column: 2 / span 3 , start from column 2 and span 3 columns 
-- grid-column: span 4 لو أكبر من الأعمده هينزل تحت مش هيبوظ الجريد زي 1/ رقم اكبر 
-*/
 * {
   box-sizing: border-box;
 }
@@ -24,7 +35,7 @@ grid-column: start / end , eg: 1-4 columns = 1/5 */
     height: 500px;
     background-color: #eee;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "head head nav nav nav" "cont cont cont cont cont";
     gap: 10px 10px;
 }
 .parent div {
