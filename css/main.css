@@ -27,16 +27,18 @@ Child
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  /* 8px margin by default */
 }
 
 .parent {
     margin: 20px auto;
-    width: 800px;
     height: 500px;
     background-color: #eee;
     display: grid;
-    grid-template-areas: "head head nav nav nav" "cont cont cont cont cont";
-    gap: 10px 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* grid-template-columns: minmax(200px, 600px) repeat(2, 1fr); */
+    /* auto-fit ch وحدة قياس بتحسب عدد الكاراكتر واضيف عامود على حسب الكاراكترز */
 }
 .parent div {
   background-color: red;
