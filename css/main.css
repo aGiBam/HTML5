@@ -1,17 +1,11 @@
 /* 
 2D Transform
-- Translate ( xaxis, yaxis ) + to right - to left
-- second value if isn;t exist will be 0 wont extend from y axis value as like as scale
+- skewX() 
+- skewY()
+- skew()
+لو مكتبتش القيمة التانيه هيكتب مكانها صفر مش زي ال scale
+إستخدامها ؟ 
 
-ليه أتعلم translate ?
-الـ transform بيغير الشكل المرئي للعنصر دون تغيير مكانه الأصلي في الـ Layout.
-top / left:
-بتغير مكان العنصر في الـ Layout.
-
-transform:
-بتغير مكان العنصر بصرياً بعد حساب الـ Layout.
-https://chatgpt.com/share/6af4b567-641c-83ea-b1dc-bae188f23ed9
-don't forget prefixes 
 */
 .x-axis {
   position: absolute;
@@ -28,6 +22,26 @@ don't forget prefixes
   width: 1px;
   height: 90%;
   background-color: black;
+}
+
+h2 { 
+  position: relative;
+  color: white;
+  margin: 20px auto;
+  width: fit-content;
+  padding: 20px;
+  transform: skewX(20deg);
+}
+
+h2::before{
+  content: '';
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1
 }
 
 .shape {
