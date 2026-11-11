@@ -38,3 +38,13 @@ div::after {
   border: 10px solid #e91e63;
   border-left-color: white;
 }
+
+div:hover::before {
+  transform: rotate(-1turn);
+  transition: 1s;
+  transition-delay: 1s;
+}
+div:hover::after {
+  transform: rotate(1turn);
+  transition: 1s;
+}
