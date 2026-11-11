@@ -1,32 +1,84 @@
 /* 
 2D Transform
-- matrix 
-بتقبل 6 قيم ل 6 functions   
-= matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )
+- transform-orgin
+/*
+Syntax
+Default Values => 50% 50% 0
+2D Transform => transform-origin(X, Y)
+3D Transform => transform-origin(X, Y, Z)
+X-Axis
+-- CSS Unit [px, em, rem]
+-- %
+-- Keyword
+---- Left = 0%
+---- Center = 50%
+---- Right = 100%
+Y-Axis
+-- CSS Unit [px, em, rem]
+-- %
+-- Keyword
+---- Top = 0%
+---- Center = 50%
+---- Bottom = 100%
+
+https://codepen.io/shshaw/full/pOVKjb
 */
-.x-axis {
-  position: absolute;
-    top: 90%;
-    left: 5%;
-    width: 90%;
-  height: 1px;
-  background-color: black;
-}
-.y-axis {
-  position: absolute;
-  top: 0;
-  left: 5%;
-  width: 1px;
-  height: 90%;
-  background-color: black;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .shape {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  margin: 50px auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
   background-color: #eee;
+}
+
+.shape .x-axis:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -20px;
+  position: absolute;
+}
+
+.shape .x-axis:after {
+  content: "X-Axis";
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.shape .y-axis:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  left: -20px;
+  position: absolute;
+}
+
+.shape .y-axis:after {
+  content: "Y-Axis";
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  height: 60px;
+  text-align: center;
+  font-weight: bold;
+  writing-mode: vertical-lr;
 }
 
 .shape > div {
@@ -39,18 +91,18 @@
   align-items: center;
   font-weight: bold;
   font-size: 30px;
-  margin-top: 5%;
+  margin: 5%;
   transition: 0.5s;
-  margin-left: 5%;
-  
-  /* transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
-  transform: scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2) translateX(20px) translateY(20px);
-  بيحصل فرق عشان طريقة توزيعي للعناصر فيها مشكله
-  بس الترتيب اللي بيعمله ال transform مش كدا 
-  بيعمل ال translate اولا وبع كدا يعمل ال scalng + skew  
-  نرنيب functionality بيفرق 
-  */
-  transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
-  transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2) ;
+  transform-origin: center center;
+  transform: rotate(100deg);
 }
-
+.shape .origin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
