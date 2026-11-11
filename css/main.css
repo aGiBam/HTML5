@@ -1,32 +1,29 @@
 /* 
 2D Transform
--- scaleX
--- scaleY
--- scale -> default (1)
-scale مختلف عن wiidth 
-scale بيشدّ العنصر بالخواص بتاعته زي margin x2
-اما width بيكير الويدث فقط
-scale(height, width) لو مكتبتش القيمة التانيه بياخدها من الأولى 
 
-- لو كتبت قيمة سالبه في scale العصنر هيتعمله flip 
+- Rotate => default 45deg
+- deg => degree الدرجات
+- rad => radians الزوايا
+- grad => gradians الزواي
+- turn => turns الدورات
+* 360 deg = 6.28 rad = 400 grad = 1 turn
+^ قيمة موجبه هيلف لليمين ، قيمة سالبة للشمال
 */
-.x-axis {
-  position: absolute;
-    top: 90%;
-    left: 5%;
-    width: 90%;
-  height: 1px;
-  background-color: black;
+.image {
+  margin: auto;
+  overflow: hidden;
+  width: 612px;
+  height: 545px;
 }
-.y-axis {
-  position: absolute;
-  top: 0;
-  left: 5%;
-  width: 1px;
-  height: 9 0%;
-  background-color: black;
+.image img {
+  transition: .5s 
 }
 
+.image:hover img {
+  transform: scale(3) rotate(25deg);
+  opacity: .6;
+}
+/* 
 .shape {
   position: relative;
   width: 400px;
@@ -47,4 +44,4 @@ scale(height, width) لو مكتبتش القيمة التانيه بياخده�
   font-size: 30px;
   margin-top: 5%;
   margin-left: 5%;
-}
+} */
