@@ -1,29 +1,35 @@
 /* 
 2D Transform
+- Translate ( xaxis, yaxis ) + to right - to left
+- second value if isn;t exist will be 0 wont extend from y axis value as like as scale
 
-- Rotate => default 45deg
-- deg => degree الدرجات
-- rad => radians الزوايا
-- grad => gradians الزواي
-- turn => turns الدورات
-* 360 deg = 6.28 rad = 400 grad = 1 turn
-^ قيمة موجبه هيلف لليمين ، قيمة سالبة للشمال
+ليه أتعلم translate ?
+الـ transform بيغير الشكل المرئي للعنصر دون تغيير مكانه الأصلي في الـ Layout.
+top / left:
+بتغير مكان العنصر في الـ Layout.
+
+transform:
+بتغير مكان العنصر بصرياً بعد حساب الـ Layout.
+https://chatgpt.com/share/6af4b567-641c-83ea-b1dc-bae188f23ed9
+don't forget prefixes 
 */
-.image {
-  margin: auto;
-  overflow: hidden;
-  width: 612px;
-  height: 545px;
+.x-axis {
+  position: absolute;
+    top: 90%;
+    left: 5%;
+    width: 90%;
+  height: 1px;
+  background-color: black;
 }
-.image img {
-  transition: .5s 
+.y-axis {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 1px;
+  height: 90%;
+  background-color: black;
 }
 
-.image:hover img {
-  transform: scale(3) rotate(25deg);
-  opacity: .6;
-}
-/* 
 .shape {
   position: relative;
   width: 400px;
@@ -44,4 +50,5 @@
   font-size: 30px;
   margin-top: 5%;
   margin-left: 5%;
-} */
+}
+
