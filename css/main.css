@@ -19,6 +19,10 @@ h1::before {
   border-right: 10px solid white;
   background-color: inherit;
   top: 0;
+  transform: matrix()
   left: -20px;
   transform: skewX(15deg)
 }
+
+/* transform: matrix(3, 0.2679, 0, 3, 20, 100); */
+/* transform: scaleX(3) skewY(15deg) skewX(0) scaleY(3) translateX(20px) translateY(100px); */
