@@ -5,6 +5,13 @@
   height: 500px;
   display: grid;
   gap: 30px;
+  grid-template-areas: 
+    "eight eight eight"
+    "two two three"
+    "four five five"
+    "sex five five"
+    "seven five five"
+    "one one one";
 }
 .grid div {
   background-color: #5692fa;
@@ -18,20 +25,37 @@
   padding: 15px 30px;
 }
 .grid .eight {
-  grid-area: 1 / 1 / span 1 / span 3;
+  grid-area: eight;
 }
 
 .grid .two {
-  grid-area: 2 / 1 / 3 / 3;
+  grid-area: two;
 }
 
 .grid .five {
-    grid-area: 3 / 2 / 6 / 4;
+    grid-area: five;
 }
 
-.one {
-   grid-area: 6 / 1 / 7 / 4;
+.grid .one {
+   grid-area: one;
 }
+
+.grid .three {
+  grid-area: three;
+}
+
+.grid .four {
+  grid-area: four;
+}
+
+.grid .sex {
+  grid-area: sex;
+}
+
+.grid .seven {
+  grid-area: seven;
+}
+
 
 /* display: grid;
   gap: 5px;
