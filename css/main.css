@@ -1,50 +1,45 @@
+/* 
+Animation
+-- keyFrames
+-- Animation Name
+-- Animation Duration
+*/
+
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
 }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 div {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin-top: 100px;
-  margin-left: -100px;
-  transform-style: preserve-3d;
-  transition: .5s;
-}
-div:hover {
-  transform: rotateY(180deg)
-}
-/* div:hover {
-  transform: rotatex(180deg)
-} */
-  
-div::before,
-div::after {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: 50%;
+  top: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-weight: bold;
-  font-size: 35px;
-  backface-visibility: hidden;
+  transform: translate(-50%, -50%);
+  animation-name: changeColor;
+  animation-duration: 6s;
 }
-
-div::before {
-  content: "front";
-  background-color: #ea2264;
-}
-
-div::after {
-  content: "back";
-  background-color: #1692fc;
-  transform: rotateY(180deg);
-  /* transform: rotateX(180deg); */
+@keyframes changeColor {
+  /* from { */
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: black;
+  }
+  /* to { */
+  100% {
+    background-color: blue;
+  }
 }
