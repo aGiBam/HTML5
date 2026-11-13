@@ -3,6 +3,8 @@ Animation
 -- keyFrames
 -- Animation Name
 -- Animation Duration
+https://medium.com/@projectluis/mastering-cubic-bezier-replacing-animations-with-transitions-e56cadb9d44c
+https://cubic-bezier.com/#.17,.67,.83,.67
 */
 
 * {
@@ -15,22 +17,44 @@ body {
 div {
   width: 100px;
   height: 100px;
-  background-color: #e8e3e3;
+  margin-top: -50px;
+  margin-left: -50px;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -50px;
-  margin-top: -50px;
-  animation-name: spin;
-  animation-duration: 1s;
-  border-radius: 50%;
+  background-color: #e8e3e3;
+  animation: coloring 3s linear 2s infinite alternate-reverse;
+  /* animation-name: coloring; */
+  /* animation-name: spin; */
+  /* border-radius: 50%;
   border: 5px solid #E91E63;
-  transition: transform 0.3s;
-  border-left-color: transparent;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  border-left-color: transparent; */
+  /* transition: transform 0.3s; */
+  /* animation-duration: 5s; */
+  /* animation-play-state: running ; default value running */
+  /* animation-iteration-count: infinite; */
+  /* animation-timing-function: linear; */
+  /* animation-fill-mode: forwards; default value none */
+  /* animation-delay: -2s; لو بالسالب يبقى كإني بقدّم وقت الأنيميشن */
+  /* animation-direction: noraml; */
+  /* animation-direction: reverse; */
+  /* animation-direction: alternate; */
+  /* animation-direction: alternate-reverse; */
 }
-@keyframes spin {
+
+@keyframes coloring {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+/* @keyframes spin {
   /* from { */
   0% {
     transform: rotate(0deg);
@@ -39,4 +63,4 @@ div {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
